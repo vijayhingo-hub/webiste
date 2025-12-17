@@ -16,13 +16,13 @@ export function Navigation() {
           <Link href="/" className="flex items-center gap-3">
             <Image
               src="/WhatsApp_Image_2025-12-13_at_2.22.16_PM-removebg-preview.png"
-              alt="Cherrish Homes logo"
+              alt="Cherish Homes logo"
               width={48}
               height={48}
               className="h-10 w-10 md:h-12 md:w-12 object-contain"
               priority
             />
-            <span className="text-2xl md:text-3xl font-serif font-semibold tracking-tight">Cherrish Homes</span>
+            <span className="text-2xl md:text-3xl font-serif font-semibold tracking-tight">Cherish Homes</span>
           </Link>
 
           {/* Desktop Navigation */}
