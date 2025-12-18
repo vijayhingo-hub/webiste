@@ -6,19 +6,19 @@ import { Target, Eye, Award } from "lucide-react"
 export default function AboutPage() {
   const team = [
     {
-      name: "Sarah Johnson",
+      name: "Vijay Hingorani",
       role: "Founder & CEO",
-      image: "/professional-woman-realtor.jpg",
+      image: "/founder-vijay-hingorani.jpg",
     },
     {
-      name: "Michael Chen",
-      role: "Senior Real Estate Agent",
-      image: "/professional-realtor.png",
+      name: "Yogesh Godhwani",
+      role: "Senior Manager",
+      image: "",
     },
     {
-      name: "Emily Rodriguez",
+      name: "Inspired by",
       role: "Luxury Property Specialist",
-      image: "/professional-woman-realtor.jpg",
+      image: "https://www.siasat.com/wp-content/uploads/2024/08/shah-rukh-khan-new-image.jpg",
     },
   ]
 
@@ -32,7 +32,7 @@ export default function AboutPage() {
         <img src="/luxury-real-estate-office-modern-interior.jpg" alt="About Us" className="absolute inset-0 w-full h-full object-cover" />
         <div className="relative z-20 container mx-auto px-4 md:px-6 lg:px-8 text-center text-white">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold mb-4 text-balance">
-            About Cherrish Homes
+            About Cherish Homes
           </h1>
           <p className="text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
             Excellence in luxury real estate since 2010
@@ -48,7 +48,7 @@ export default function AboutPage() {
               <h2 className="text-3xl md:text-4xl font-serif font-bold mb-6 text-balance">Our Story</h2>
               <div className="space-y-4 text-muted-foreground leading-relaxed">
                 <p>
-                  Founded in 2010, Cherrish Homes has established itself as a premier luxury real estate agency,
+                  Founded in 2010, Cherish Homes has established itself as a premier luxury real estate agency,
                   specializing in high-end properties across California's most prestigious neighborhoods.
                 </p>
                 <p>
@@ -57,7 +57,7 @@ export default function AboutPage() {
                   of clients find their dream homes and investment properties.
                 </p>
                 <p>
-                  Today, Cherrish Homes stands as a trusted name in luxury real estate, known for our integrity,
+                  Today, Cherish Homes stands as a trusted name in luxury real estate, known for our integrity,
                   professionalism, and unwavering commitment to client satisfaction.
                 </p>
               </div>

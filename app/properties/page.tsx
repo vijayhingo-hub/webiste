@@ -40,7 +40,7 @@ export default function PropertiesPage() {
       id: "maple-woods",
       name: "Maple Woods",
       location: "Airoli, Navi Mumbai",
-      image: "/modern-luxury-villa-exterior.png",
+      image: "https://proviso.in/wp-content/uploads/2022/10/maple-woods-01-04.jpg.webp",
       status: "ONGOING",
     },
     {
@@ -101,7 +101,7 @@ export default function PropertiesPage() {
               </h1>
               <div className="w-24 h-1 bg-accent mx-auto mb-8"></div>
               <p className="text-lg md:text-xl lg:text-2xl max-w-4xl mx-auto leading-relaxed">
-                Experience the pinnacle of luxury living with Cherrish Homes, where every detail is meticulously crafted to cater to the most discerning tastes. From opulent residences adorned with exquisite finishes to world-class amenities and unparalleled service, Cherrish Homes redefines the art of luxurious living, offering an unmatched lifestyle experience for its residents.
+                Experience the pinnacle of luxury living with Cherish Homes, where every detail is meticulously crafted to cater to the most discerning tastes. From opulent residences adorned with exquisite finishes to world-class amenities and unparalleled service, Cherish Homes redefines the art of luxurious living, offering an unmatched lifestyle experience for its residents.
               </p>
             </div>
           </div>

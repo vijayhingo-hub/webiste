@@ -7,7 +7,7 @@ export function Footer() {
       <div className="container mx-auto px-4 md:px-6 lg:px-8 py-12 md:py-16">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-12">
           <div className="space-y-4">
-            <h3 className="text-xl font-serif font-semibold">Cherrish Homes</h3>
+          <h3 className="text-xl font-serif font-semibold">Cherish Homes</h3>
             <p className="text-sm text-muted-foreground leading-relaxed">
               Your trusted partner in finding the perfect luxury property.
             </p>
@@ -71,7 +71,7 @@ export function Footer() {
         </div>
 
         <div className="mt-12 pt-8 border-t border-border/20 text-center text-sm text-muted-foreground">
-          <p>&copy; {new Date().getFullYear()} Cherrish Homes. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Cherish Homes. All rights reserved.</p>
         </div>
       </div>
     </footer>

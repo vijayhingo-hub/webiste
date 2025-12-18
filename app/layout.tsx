@@ -15,8 +15,8 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: "Cherrish Homes - Luxury Real Estate",
-  description: "Find your dream home with Cherrish Homes. Explore our exclusive collection of luxury properties.",
+  title: "Cherish Homes - Luxury Real Estate",
+  description: "Find your dream home with Cherish Homes. Explore our exclusive collection of luxury properties.",
   generator: "v0.app",
   icons: {
     icon: [
