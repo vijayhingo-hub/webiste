@@ -10,19 +10,19 @@ export default function HomePage() {
   const featuredProperties = [
     {
       id: 1,
-      title: "Modern Villa Estate",
-      location: "Beverly Hills, CA",
-      price: "$4,500,000",
-      beds: 5,
-      baths: 6,
-      sqft: "6,500",
-      image: "/modern-luxury-villa-exterior.png",
+      title: "Modern Apartments",
+      location: "Proviso Maple Woods Airoli",
+      price: "₹ 1.30 Cr* Onwards",
+      beds: "2BHK",
+      baths: "3BHK",
+      sqft: "Carpet Area 630 SqFt to 840 SqFt",
+      image: "https://proviso.in/wp-content/uploads/2022/10/maple-woods-01-04.jpg.webp",
     },
     {
       id: 2,
       title: "Oceanfront Penthouse",
       location: "Malibu, CA",
-      price: "$8,200,000",
+      price: "₹ 82 Lakhs",
       beds: 4,
       baths: 5,
       sqft: "5,200",
@@ -32,7 +32,7 @@ export default function HomePage() {
       id: 3,
       title: "Contemporary Mansion",
       location: "Los Angeles, CA",
-      price: "$6,750,000",
+      price: "₹ 68 Lakhs",
       beds: 6,
       baths: 7,
       sqft: "8,300",
@@ -80,7 +80,7 @@ export default function HomePage() {
         <div className="container mx-auto px-4 md:px-6 lg:px-8">
           <div className="text-center mb-12 md:mb-16">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold mb-4 text-balance">
-              Why Choose Cherrish Homes
+              Why Choose Cherish Homes
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto leading-relaxed">
               We provide exceptional service and expertise in luxury real estate
@@ -170,9 +170,19 @@ export default function HomePage() {
                     <p className="text-sm text-muted-foreground">{property.location}</p>
                   </div>
                   <div className="flex items-center justify-between text-sm">
-                    <span>{property.beds} beds</span>
-                    <span>{property.baths} baths</span>
-                    <span>{property.sqft} sqft</span>
+                    {property.id === 1 ? (
+                      <>
+                        <span>{property.beds}</span>
+                        <span>{property.baths}</span>
+                        <span>{property.sqft}</span>
+                      </>
+                    ) : (
+                      <>
+                        <span>{property.beds} beds</span>
+                        <span>{property.baths} baths</span>
+                        <span>{property.sqft} sqft</span>
+                      </>
+                    )}
                   </div>
                   <div className="pt-4 border-t border-border">
                     <p className="text-2xl font-serif font-bold text-accent">{property.price}</p>

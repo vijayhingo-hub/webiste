@@ -15,14 +15,14 @@ export default function PropertyDetailPage({ params }: { params: Promise<{ id: s
   const mapleWoodsData = {
     id: "maple-woods",
     name: "Maple Woods",
-    subtitle: "1 & 2 BHK Flats in Airoli",
+    subtitle: "1, 2 & 3BHK Flats in Airoli",
     location: "Airoli, Navi Mumbai",
     reraNumber: "Available on request",
     description: "Maple woods is a residential and commercial project with six towers of G+38 at Airoli, Navi Mumbai. At Maple Woods, 1, 2 & 3 BHK spaces are designed to meet your expectations, with all modern amenities.",
     detailedDescription: "Looking for a comfortable and affordable home in Airoli? Look no further! We have a wide range of flats that cater to the needs of individuals, couples, and families of all sizes. Our 1bhk flats in Airoli are perfect for those who prefer a compact and low-maintenance home, while our 2bhk and 3bhk flats in Airoli are spacious and equipped with all the modern amenities you need to live a comfortable and convenient life. We have several flats for sale in Airoli that come loaded with amenities such as parking lot, landscape garden, children's play area, and more. Stay connected with high-speed Wi-Fi, take a dip in the pool, or relax in the clubhouse. Our goal is to help you find the perfect home that meets your preferences and needs. Contact us today and let us help you find your dream flat in Airoli, complete with all the amenities you need for a comfortable and modern living experience!",
     configuration: "1BHK, 2BHK & 3BHK Flats",
     floors: "G + 38 Floors",
-    image: "/modern-luxury-villa-exterior.png",
+    image: "https://www.provisomaplewoods.com/assets/img/desk_ban_2.webp",
     configurations: [
       { type: "1 BHK", sqft: "421 Sq.ft" },
       { type: "2 BHK", sqft: "633 Sq.ft" },
