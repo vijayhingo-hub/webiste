@@ -8,7 +8,7 @@ export default function AboutPage() {
     {
       name: "Vijay Hingorani",
       role: "Founder & CEO",
-      image: "/founder-vijay-hingorani.jpg",
+      image: "/WhatsApp Image 2025-12-10 at 5.15.16 PM.jpeg",
     },
     {
       name: "Yogesh Godhwani",
