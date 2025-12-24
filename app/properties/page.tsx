@@ -44,6 +44,20 @@ export default function PropertiesPage() {
       status: "ONGOING",
     },
     {
+      id: "aadi-allure",
+      name: "Aadi Allure",
+      location: "Kanjurmarg East, Mumbai",
+      image: "/image1.png",
+      status: "ONGOING",
+    },
+    {
+      id: "gupta-aden-court",
+      name: "Gupta Aden Court",
+      location: "Mumbai",
+      image: "/contemporary-mansion-with-pool.jpg",
+      status: "ONGOING",
+    },
+    {
       id: 2,
       name: "Contemporary Living Spaces",
       location: "Navi Mumbai, Maharashtra",
