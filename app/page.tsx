@@ -1,11 +1,53 @@
+"use client"
+
+import { useRef } from "react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { Home, Award, Users, TrendingUp } from "lucide-react"
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel"
+import Autoplay from "embla-carousel-autoplay"
 
 export default function HomePage() {
+  const autoplayPlugin = useRef(
+    Autoplay({ delay: 4000, stopOnInteraction: false })
+  )
+
+  const heroSlides = [
+    {
+      id: 1,
+      image: "https://proviso.in/wp-content/uploads/2022/10/maple-woods-01-04.jpg.webp",
+      title: "Modern Luxury Residences",
+    },
+    {
+      id: 2,
+      image: "/contemporary-mansion-with-pool.jpg",
+      title: "Contemporary Living Spaces",
+    },
+    {
+      id: 3,
+      image: "/image1.png",
+      title: "Aadi Allure - Kanjurmarg East",
+    },
+    {
+      id: 4,
+      image: "https://www.designblendz.com/hs-fs/hubfs/21031200-150-180%20West%20Berks%20Street_Still%20Rendering_NW%20Ground_TrainStation_Final%20V1.1.jpg?width=900&name=21031200-150-180%20West%20Berks%20Street_Still%20Rendering_NW%20Ground_TrainStation_Final%20V1.1.jpg",
+      title: "Luxury Residential Complex",
+    },
+    {
+      id: 5,
+      image: "https://png.pngtree.com/thumb_back/fw800/background/20220312/pngtree-high-definition-photography-of-real-estate-buildings-image_994307.jpg",
+      title: "Modern Real Estate Development",
+    },
+  ]
 
   const featuredProperties = [
     {
@@ -44,33 +86,60 @@ export default function HomePage() {
     <div className="min-h-screen">
       <Navigation />
 
-      {/* Hero Section */}
-      <section className="relative h-[90vh] flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 bg-linear-to-b from-black/30 to-black/50 z-10" />
-        <img
-          src="/luxury-modern-home-exterior-aerial-view.jpg"
-          alt="Hero"
-          className="absolute inset-0 w-full h-full object-cover"
-        />
-        <div className="relative z-20 container mx-auto px-4 md:px-6 lg:px-8 text-center text-white">
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif font-bold mb-6 text-balance">
-            Premium Living Spaces
-          </h1>
-          <p className="text-lg md:text-xl mb-8 max-w-2xl mx-auto leading-relaxed text-pretty">
-            Find your perfect home in the most desirable locations
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button asChild size="lg" className="bg-primary hover:bg-primary/90">
-              <Link href="/properties">View Properties</Link>
-            </Button>
-            <Button
-              asChild
-              size="lg"
-              variant="outline"
-              className="bg-white/10 hover:bg-white/20 text-white border-white/30"
-            >
-              <Link href="/contact">Schedule Viewing</Link>
-            </Button>
+      {/* Hero Section with Slider */}
+      <section className="relative">
+        <div className="relative h-[90vh] overflow-hidden">
+          <Carousel
+            opts={{
+              align: "start",
+              loop: true,
+            }}
+            plugins={[autoplayPlugin.current]}
+            className="w-full h-full"
+            onMouseEnter={() => autoplayPlugin.current?.stop()}
+            onMouseLeave={() => autoplayPlugin.current?.reset()}
+          >
+            <CarouselContent className="h-full">
+              {heroSlides.map((slide) => (
+                <CarouselItem key={slide.id} className="h-full pl-0">
+                  <div className="relative h-full w-full">
+                    <img
+                      src={slide.image || "/placeholder.svg"}
+                      alt={slide.title}
+                      className="w-full h-full object-cover"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/80"></div>
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="left-4 md:left-8" />
+            <CarouselNext className="right-4 md:right-8" />
+          </Carousel>
+
+          {/* Hero Content Overlay */}
+          <div className="absolute inset-0 flex items-center justify-center z-10">
+            <div className="container mx-auto px-4 md:px-6 lg:px-8 text-center text-white">
+              <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif font-bold mb-6 text-balance">
+                Premium Living Spaces
+              </h1>
+              <p className="text-lg md:text-xl mb-8 max-w-2xl mx-auto leading-relaxed text-pretty">
+                Find your perfect home in the most desirable locations
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button asChild size="lg" className="bg-primary hover:bg-primary/90">
+                  <Link href="/properties">View Properties</Link>
+                </Button>
+                <Button
+                  asChild
+                  size="lg"
+                  variant="outline"
+                  className="bg-white/10 hover:bg-white/20 text-white border-white/30"
+                >
+                  <Link href="/contact">Schedule Viewing</Link>
+                </Button>
+              </div>
+            </div>
           </div>
         </div>
       </section>
